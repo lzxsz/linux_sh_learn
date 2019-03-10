@@ -15,7 +15,7 @@
 #!/bin/bash
 
 #a=30  #20
-a=30
+a=10
 b=20
 
 if [ $a -eq $b ]
@@ -58,4 +58,13 @@ then
   echo "$a -le $b: a 小于或等于 b"
 else
   echo "$a -le $b: a 大于 b"
+fi
+
+#多分支选择
+if [ $a -lt $b ]; then
+   echo "=> $a -lt $b: a 小于 b"
+elif [ $a -gt $b ]; then
+   echo "=> $a -gt $b: a 大于 b"   
+else   # [ $a -eq $b ]
+   echo "=> $a -eq $b : a 等于 b"
 fi
